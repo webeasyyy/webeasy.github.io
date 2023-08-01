@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png">
+	
+    <title>Thank You!</title>
+    <!-- Your CSS and other head elements here -->
+    <style>
+        @font-face {	
+            font-family: 'Spectral', serif;
+          
+            src: url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');	
+            font-weight: bold;	
+            font-style: normal;	
+          }	
+        body {
+            font-family: 'Spectral', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .thank-you {
+            display: inline-block;
+            position: relative;
+        }
+        .thank-you-border {
+            display: inline-block;
+            padding: 5px; /* Adjust this value to control the border thickness */
+            background-image: linear-gradient(45deg, #029a9f, #94C973);
+            border: 2px solid cyan;
+        }
+
+        .thank-you h1 {
+            --border-color: #029a9f;
+            --border-width: 1px;
+            color: #94C973;
+            -webkit-text-stroke: var(--border-width) var(--border-color);
+            text-stroke: var(--border-width) var(--border-color);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center; padding: 50px;">
+        <div class="thank-you">
+            <h1><b>Thank You..!</b></h1>
+        </div>
+        <h3>We appreciate you getting in touch with us.</h3>
+        <h3>We will respond to your inquiry as soon as possible.</h3>
+        <!-- Add any other custom content or message you want to display -->
+    </div>
+    <!-- Other HTML content, if any -->
+</body>
+
+</html>
