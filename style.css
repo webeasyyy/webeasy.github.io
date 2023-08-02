@@ -1276,6 +1276,10 @@ video {
     transform: translateX(30px);
   }
 }
+.right-content {
+  
+  
+}
 
 .right-content {
   -webkit-animation: wiggle 3s ease-in-out infinite;
