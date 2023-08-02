@@ -1265,12 +1265,6 @@ video {
   background: cover;
 }
 
-.right-content {
-  position: absolute;
-  right: 1.25rem;
-  display: none;
-}
-
 @-webkit-keyframes wiggle {
   50% {
     transform: translateX(30px);
