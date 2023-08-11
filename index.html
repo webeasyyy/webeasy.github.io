@@ -1771,7 +1771,7 @@
 			</div>
 			<div class="modal-body relative p-4 ">
 				<h2 id="error-validation-message" class="hidden md:px-6 text-sm text-error font-bold">There was a problem with your submission. Please review the fields below.</h2>
-				<form method="POST" action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSecedtjPbW7-QtkEejDs0ScWaM2uO9yBiQmkPF-3E92fwFbag/formResponse" class="form md:p-6 contact_us-form" onsubmit="return openThankYouPage()" >
+				<form method="POST" action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSecedtjPbW7-QtkEejDs0ScWaM2uO9yBiQmkPF-3E92fwFbag/formResponse" class="form md:p-6 contact_us-form" onsubmit="submitForm(event)" >
 					<div class="name md:flex md:justify-between">
 						<div class="fname md:w-1/2 w-full md:pr-2 lg:pb-0 pb-4 lg:min-h-[88px]">
 							<input type="text" placeholder="Name" name="entry.264659171" class="w-full py-2 px-7 border-2 border-bdrcolor rounded font-heading text-lightgray focus:outline-none placeholder-lightgray h-[56px] focus:border-2 focus:border-yellowcolor" required>
@@ -1800,7 +1800,6 @@
 					<input type="submit" value="Submit" class="submit-btn cursor-pointer font-heading rounded-[3px] text-white font-lg bg-yellowcolor px-8 py-1 h-[46px] hover:ease-in hover:transition-all hover:bg-white hover:text-yellowcolor border-2 hover:border-yellowcolor">
 				</form>
 			</div>
-			<h3 class="thankyou text-smtext md:pb-16 md:text-4xl">Thanks for <span class="text-yellowcolor"> contacting </span> Us.</h3>
 		</div>
 	</div>
 </div>
@@ -1816,14 +1815,25 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 <script>
-	function openThankYouPage() {
-	  // Open the "Thank You" page in a new tab/window
-	  window.open('./thankyou', '_blank');
-   
-	  // Prevent the default form submission behavior
-	  return false;
+	async function submitForm(event) {
+	    event.preventDefault(); // Prevent the default form submission behavior
+ 
+	    const form = event.target;
+ 
+	    try {
+		   // Your code to handle the form submission (e.g., AJAX request to submit the form data)
+		   // Replace the following with your actual submission code
+		   const response = await fetch(form.action, {
+			  method: 'POST',
+			  body: new FormData(form)
+		   });
+		   
+
+	    } catch (error) {
+		window.location.href = "thankyou.html";
+	    }
 	}
-   </script>
+</script>
 
 <script>
 	jQuery( document ).ready(function($) {
